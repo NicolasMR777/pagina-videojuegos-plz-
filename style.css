@@ -1,0 +1,185 @@
+/* === RESET Y FUENTE GENERAL === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #8a2be2; /* Beige */
+  background: linear-gradient(500deg, #7f6e8f, #6a0dad, #7f6e8f);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* === ENCABEZADO === */
+header {
+ 
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding: 50px 20px 30px;
+  position: relative;
+  
+}
+header a {
+  color: white; /* o el color que quieras */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px; /*tamaño de la letra */
+}
+
+header a:hover {
+  color: #000000; /* color al pasar el mouse, opcional */
+}
+
+  header ul {
+  list-style: disc;     /* Asegura que los puntos aparezcan */
+  padding-left: 20px;   /* Reduce la sangría para acercar el punto al texto */
+  margin: 0 auto;       /* Centra la lista si está en bloque */
+  display: inline-block; /* Opcional: ayuda a centrar la lista completa */
+  text-align: left;     /* Mantiene el texto alineado correctamente */
+}
+
+
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+
+/* === NAVEGACIÓN === */
+.navbar {
+  background-color: #dfdfdf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* === LOGO EN EL HEADER === */
+.logo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #f5f5dc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  background-color: white;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.logo:hover {
+  transform: rotate(360deg);
+  transition: transform 0.6s ease-in-out;
+}
+
+
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+
+.navbar li a {
+  color: #f5f5dc;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar li a:hover {
+  background-color: #d8bfd8;
+  color: #ffffff;
+}
+
+/* === MENÚ RESPONSIVE === */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #f5f5dc;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background-color: #4b0082;
+    width: 100%;
+    padding: 15px 0;
+    margin-top: 10px;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .navbar img {
+    display: none;
+  }
+}
+
+/* === SECCIONES === */
+main {
+  padding: 50px 20px;
+  background-color: #fffaf0;
+}
+
+section {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  text-align: center;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #fdf6e3;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  
+}
+
+section h2 {
+  color: #6a0dad;
+  font-size: 2em;
+  margin-bottom: 15px;
+  
+}
+section h3 img{
+   max-width: 100%;
+  width: 300px; /* Ajusta el valor según lo que necesites */
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border-radius: 2px; /* Opcional, si quieres esquinas redondeadas */
+}
+section p {
+  font-size: 1.1em;
+  color: #444;
+}
+
+/* === PIE DE PÁGINA === */
+footer {
+  background-color: #6a0dad;
+  color: #f5f5dc;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.95em;
+  margin-top: 40px;
+  box-shadow: 0 -3px 8px rgba(0,0,0,0.1);
+}
